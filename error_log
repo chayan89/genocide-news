@@ -1,0 +1,3 @@
+[25-Feb-2021 21:09:18 Asia/Bahrain] PHP Fatal error:  Only variables can be passed by reference in /home/dsouq/public_html/Genocide/beta/application/views/front/index.php on line 223
+[25-Feb-2021 21:09:29 Asia/Bahrain] PHP Fatal error:  Only variables can be passed by reference in /home/dsouq/public_html/Genocide/beta/application/views/front/index.php on line 223
+[28-Feb-2021 15:13:58 UTC] PHP Warning:  POST Content-Length of 410732916 bytes exceeds the limit of 41943040 bytes in Unknown on line 0
