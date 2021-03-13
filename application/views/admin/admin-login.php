@@ -80,11 +80,11 @@
           <div class="modal-body">
             <label class="input-group-addon" id="basic-addon1"> Enter the 5 Digits Code sent to your e-mail </label>
             <div class="from-group">
-              <input type="text" id="otp1" name="otp1" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
-              <input type="text" id="otp2" name="otp2" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
-              <input type="text" id="otp3" name="otp3" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
-              <input type="text" id="otp4" name="otp4" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
-              <input type="text" id="otp5" name="otp5" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+              <input type="text" id="otp1" name="otp1" tabindex="0" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+              <input type="text" id="otp2" name="otp2" tabindex="1" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+              <input type="text" id="otp3" name="otp3" tabindex="2" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+              <input type="text" id="otp4" name="otp4" tabindex="3" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
+              <input type="text" id="otp5" name="otp5" tabindex="4" class="form-control" placeholder="" aria-describedby="basic-addon1" required>
             </div>
           </div>
           <div class="modal-footer">
@@ -149,7 +149,6 @@
         });
     })
     
-    
     $('#frmVerifyOTP input').on('keyup', function(){
         let v = $(this).val();
         if(isNaN(v)){
@@ -157,6 +156,10 @@
         }
         if(v > 9){
             $(this).val($(this).val().substr($(this).val().length-1, 1));
+        }
+        if(!isNaN(v)){
+            let t = $(this).prop('tabindex');
+            $('input[tabindex="'+(t+1)+'"]').focus();
         }
     })
     
